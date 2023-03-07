@@ -13,8 +13,8 @@ public class test1 {
 @Test
 public void regular() {
 		ArrayList<String> names =new ArrayList<String>();
-		names.add("pratheep");
-		names.add("Ambika");
+		names.add("pratheepsps");
+		names.add("wife");
 		names.add("Amma");
 		names.add("Appa");
 		names.add("son");

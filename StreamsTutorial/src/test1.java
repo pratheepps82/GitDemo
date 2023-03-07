@@ -41,7 +41,7 @@ public void StreamsFilter() {
 	long s=names.stream().filter(a ->a.startsWith("A")).count();
 	System.out.println(s);
 	
-	long f=Stream.of("pratheep","wife","Amma","Appa").filter(fs ->fs.startsWith("A")).count();
+	long f=Stream.of("pratheep","Awife","Amma","Appa").filter(fs ->fs.startsWith("A")).count();
 	System.out.println(f);
 	
 	//print all the names of arraylist

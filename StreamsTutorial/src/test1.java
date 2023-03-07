@@ -17,6 +17,8 @@ public void regular() {
 		names.add("Ambika");
 		names.add("Amma");
 		names.add("Appa");
+		names.add("son");
+		names.add("daughter");
 		int count=0;
 for(int i=0;i<names.size();i++)
 {

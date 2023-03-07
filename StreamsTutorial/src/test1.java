@@ -35,13 +35,13 @@ for(int i=0;i<names.size();i++)
 public void StreamsFilter() {
 	ArrayList<String> names =new ArrayList<String>();
 	names.add("pratheep");
-	names.add("Ambika");
+	names.add("wife");
 	names.add("Amma");
 	names.add("Appa");
 	long s=names.stream().filter(a ->a.startsWith("A")).count();
 	System.out.println(s);
 	
-	long f=Stream.of("pratheep","Ambika","Amma","Appa").filter(fs ->fs.startsWith("A")).count();
+	long f=Stream.of("pratheep","wife","Amma","Appa").filter(fs ->fs.startsWith("A")).count();
 	System.out.println(f);
 	
 	//print all the names of arraylist
@@ -56,19 +56,19 @@ public void streamMap() {
 	.forEach(a->System.out.println(a));
 	
 	//print names which have first letter as a with uppercase and sorted
-	Stream.of("APratheep","Ambika","Nitheesh","Taarini","Amma","Appa").filter(b->b.startsWith("A")).sorted().map(b->b.toUpperCase())
+	Stream.of("APratheep","AWife","Son","Daughter","Amma","Appa").filter(b->b.startsWith("A")).sorted().map(b->b.toUpperCase())
 	.forEach(b->System.out.println(b));
 	
-	List<String> names2=Arrays.asList("APratheep","Ambika","Nitheesh","Taarini","Amma","Appa");
+	List<String> names2=Arrays.asList("APratheep","Awife","Son","Daughter","Amma","Appa");
 	
 	ArrayList<String> names1 =new ArrayList<String>();
-	names1.add("Senthur");
-	names1.add("Nandhini");
-	names1.add("Kala");
-	names1.add("Panneer");
+	names1.add("Thambi");
+	names1.add("Thangachi");
+	names1.add("Amma");
+	names1.add("Appa");
 	Stream<String> newStream =Stream.concat(names2.stream(), names1.stream());
 	//newStream.sorted().forEach(s->System.out.println(s));
-	boolean flag=newStream.anyMatch(s->s.equalsIgnoreCase("Taarini"));
+	boolean flag=newStream.anyMatch(s->s.equalsIgnoreCase("Thambi"));
 	System.out.println(flag);
 	Assert.assertTrue(flag);
 	
@@ -76,7 +76,7 @@ public void streamMap() {
 @Test
 public void StreamCollect() {
 	
-	List<String> ls=Stream.of("APratheep","Ambika","Nitheesh","Taarini","Amma","Appa").filter(b->b.startsWith("A")).sorted().map(b->b.toUpperCase())
+	List<String> ls=Stream.of("APratheep","Awife","Son","Daughter","Amma","Appa").filter(b->b.startsWith("A")).sorted().map(b->b.toUpperCase())
 			.collect(Collectors.toList());
 	System.out.println(ls.get(0));
 	

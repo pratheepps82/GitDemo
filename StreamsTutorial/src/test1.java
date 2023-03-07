@@ -52,7 +52,7 @@ public void StreamsFilter() {
 @Test
 public void streamMap() {
 	//print names of length>4 with uppercase
-	Stream.of("Pratheep","Ambika","Nitheesh","Taarini","Amma","Appa").filter(a->a.endsWith("a")).map(a->a.toUpperCase())
+	Stream.of("Pratheep","AWife","Son","Daughter","Amma","Appa").filter(a->a.endsWith("a")).map(a->a.toUpperCase())
 	.forEach(a->System.out.println(a));
 	
 	//print names which have first letter as a with uppercase and sorted
